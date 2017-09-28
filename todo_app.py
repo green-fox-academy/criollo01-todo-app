@@ -28,7 +28,7 @@ class Controller():
                 pass
         else:
             print("Unsupported argument")
-            print_usage.help_text()
+            help_text.print_usage()
 
 
 class Display():
@@ -60,6 +60,7 @@ class Display():
                 elif task[0] == "1":
                     print(serial, "[x] - ", task[0])
 
+
 class Model():
 
     def read_file(self):
@@ -77,7 +78,7 @@ class Model():
         append_text = "" + check_text + "\n"
         append_todo.writelines(append_text)
         append_todo.close()
-        print("Task added successfully.")
+        print("\nTask added successfully.")
 
     def remove_task(self):
         pass
