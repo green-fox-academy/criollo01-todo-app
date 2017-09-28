@@ -27,7 +27,7 @@ class Controller():
             else:
                 pass
         else:
-            print("Unsupported argument")
+            print("\nUnsupported argument")
             help_text.print_usage()
 
 
@@ -35,7 +35,6 @@ class Display():
 
     def print_usage(self):
         print(
-            "\n"
             "\n"
             "Python Todo application\n"
             "=======================\n"
@@ -78,7 +77,7 @@ class Model():
         append_text = "" + check_text + "\n"
         append_todo.writelines(append_text)
         append_todo.close()
-        print("\nTask added successfully.")
+        print("Task added successfully.")
 
     def remove_task(self):
         pass
