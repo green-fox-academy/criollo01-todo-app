@@ -27,7 +27,7 @@ class Controller():
             else:
                 pass
         else:
-            print("\nUnsupported argument")
+            print("Unsupported argument")
             help_text.print_usage()
 
 
@@ -64,12 +64,8 @@ class Model():
 
     def read_file(self):
         read_todo = open("todo.txt", "r")
-        read_lines_todo = read_todo.readlines()
-        todo_list = []
-        for line in read_lines_todo:
-            todo_list.append(line.split("\n"))
-        read_todo.close()
-        return todo_list
+        read_lines_todo = read_todo.read().split("\n")
+        print(read_lines_todo)
 
     def add_task(self):
         append_todo = open("todo.txt", "a")
